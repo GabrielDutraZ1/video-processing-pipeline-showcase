@@ -1,0 +1,12 @@
+*.log
+*.mp4
+*.mkv
+*.avi
+*.mov
+
+converted/
+raw/
+
+.env
+cache/
+tmp/
