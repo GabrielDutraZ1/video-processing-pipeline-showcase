@@ -1,3 +1,13 @@
+![Linux](https://img.shields.io/badge/Linux-Ubuntu_Server-orange)
+![Bash](https://img.shields.io/badge/Bash-Automation-green)
+![FFmpeg](https://img.shields.io/badge/FFmpeg-Video_Processing-red)
+![Systemd](https://img.shields.io/badge/Systemd-Service-blue)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-Headless_Mode-purple)
+![Status](https://img.shields.io/badge/Status-Operational-success)
+
+
+
+
 # Video Processing Pipeline
 
 Automated video processing pipeline focused on institutional media organization, transcoding, validation and continuous monitoring.
@@ -11,6 +21,8 @@ This project was developed as a Proof of Concept (POC) for scalable institutiona
 The pipeline continuously monitors raw media folders, automatically generates multiple resolutions, validates converted files and performs self-healing operations when corrupted outputs are detected.
 
 ---
+
+The pipeline continuously monitors...
 
 # Main Features
 
@@ -97,6 +109,25 @@ This creates an automated self-healing media workflow.
 
 ---
 
+# Infrastructure Design
+
+The project architecture was designed to simulate a resilient institutional media processing environment.
+
+Core infrastructure concepts implemented:
+
+* isolated Ubuntu processing environment;
+* headless virtualization;
+* automated service lifecycle;
+* continuous monitoring loop;
+* automated recovery workflow;
+* mirrored output architecture;
+* scalable folder organization.
+
+The pipeline was intentionally designed with scalability in mind, allowing future migration to cloud or distributed infrastructures.
+
+---
+
+
 # Headless Infrastructure
 
 The environment was configured to operate entirely in headless mode.
@@ -140,6 +171,25 @@ Future deployment on dedicated infrastructure may significantly increase process
 
 ---
 
+# Architecture Flow
+
+```txt
+RAW MEDIA
+    ↓
+MONITORING
+    ↓
+COPY VALIDATION
+    ↓
+TRANSCODING
+    ↓
+OUTPUT VALIDATION
+    ↓
+AUTO-HEALING
+    ↓
+ORGANIZED DELIVERY
+```
+
+
 # Project Status
 
 Current Version:
@@ -167,3 +217,66 @@ Gabriel Dutra
 This repository is intended as a technical showcase and architectural demonstration.
 
 Sensitive institutional structures, real datasets and production infrastructure details were intentionally omitted.
+
+# Monitoring & Reliability
+
+The pipeline continuously validates operational integrity during execution.
+
+Implemented reliability strategies include:
+
+* continuous monitoring cycles;
+* retry logic;
+* validation tolerance checks;
+* automatic corrupted file replacement;
+* filesystem stabilization delays;
+* service persistence using systemd.
+
+These mechanisms help ensure operational resilience even in low-resource environments.
+
+---
+
+# Monitoring Example
+
+Real-time monitoring and logging system during continuous execution.
+
+![Logs Monitoring](images/logs_monitoring.png)
+
+---
+
+# Systemd Service
+
+Persistent background execution managed through systemd.
+
+![Systemd Service](images/systemd_service.png)
+
+---
+
+# RAW Media Structure
+
+Institutional RAW media organization structure.
+
+![RAW Structure](images/raw_structure.png)
+
+---
+
+# Converted Media Structure
+
+Automatically mirrored converted media structure.
+
+![Converted Structure](images/converted_structure.png)
+
+---
+
+# FFmpeg Processing
+
+Live transcoding processes during pipeline execution.
+
+![FFmpeg Processing](images/ffmpeg_processing.png)
+
+---
+
+# Headless Infrastructure
+
+Virtualized Ubuntu Server operating in fully headless mode.
+
+![Headless VM](images/headless_vm.png)
